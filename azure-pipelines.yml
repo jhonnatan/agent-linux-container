@@ -1,0 +1,15 @@
+# This pipeline is for study "Implementing Azure DevOps"
+trigger:
+- master
+
+pool:
+ name: 'container-linux'
+ demands:
+ - Agent.OS -equals Linux
+
+steps:
+  - task: Bash@3
+    displayName: 'Execute inline Bash'
+    inputs :
+     targetType: inline
+     script: echo "This Azure Pipeline task was successfully executed on $(hostname) using Bash inside a container."
