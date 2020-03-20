@@ -3,7 +3,7 @@ trigger:
 - master
 
 pool:
- name: 'container-linux'
+ name: 'container-linux-02'
  demands:
  - Agent.OS -equals Linux
 
